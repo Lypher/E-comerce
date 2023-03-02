@@ -52,21 +52,21 @@ function mostrarProducts() {
     const eCommerceHtml = document.createElement("article");
     eCommerceHtml.className = "cards";
     eCommerceHtml.innerHTML += `
-                <img class="cards__img" src="${product.img}" alt="${
+              <img class="cards__img" src="${product.img}" alt="${
       product.nombre
     }">
-                <h3 id= "ve" class="cards__titulo">${product.nombre}</h3>
-                <p class="cards__info">${product.descripcion}.</p>
-                <p class="cards__info"> Contenido neto: ${
-                  product.contenidoNeto
-                }.</p>
-                <p class="cards__precio${
-                  product.precio < 3000 ? "-oferta" : "-comun"
-                }">Precio: $ ${product.precio}</p>
-                <button class="btn btn-bd-primary" id="button_${
-                  product.id
-                }">Agregar al carrito</button>
-        `;
+              <h3 id= "ve" class="cards__titulo">${product.nombre}</h3>
+              <p class="cards__info">${product.descripcion}.</p>
+              <p class="cards__info"> Contenido neto: ${
+                product.contenidoNeto
+              }.</p>
+              <p class="cards__precio${
+                product.precio < 3000 ? "-oferta" : "-comun"
+              }">Precio: $ ${product.precio}</p>
+              <button class="btn btn-bd-primary" id="button_${
+                product.id
+              }">Agregar al carrito</button>
+      `;
     sectionEcommerce.appendChild(eCommerceHtml);
 
     const card__button = document.getElementById(`button_${product.id}`);
@@ -154,10 +154,10 @@ function actualizarCarrito() {
       productDetailElement.innerHTML = `<img class="carrito__img" src="${
         product.img
       }" alt="${product.nombre}"></img>
-        <li class="">${product.cantidad} ${product.nombre} $${
+      <li class="">${product.cantidad} ${product.nombre} $${
         product.precio * product.cantidad
       }</li>
-        `;
+      `;
 
       //Quitar del carrito //
 
@@ -310,21 +310,21 @@ function establecerFiltroCategoria() {
       const eCommerceHtml = document.createElement("article");
       eCommerceHtml.className = "cards";
       eCommerceHtml.innerHTML += `
-                  <img class="cards__img" src="${product.img}" alt="${
+                <img class="cards__img" src="${product.img}" alt="${
         product.nombre
       }">
-                  <h3 class="cards__titulo">${product.nombre}</h3>
-                  <p class="cards__info">${product.descripcion}.</p>
-                  <p class="cards__info"> Contenido neto: ${
-                    product.contenidoNeto
-                  }.</p>
-                  <p class="cards__precio${
-                    product.precio < 3000 ? "-oferta" : "-comun"
-                  }">Precio: $ ${product.precio}</p>
-                  <button class="btn btn-bd-primary" id="button${
-                    product.id
-                  }">Agregar al carrito</button>
-          `;
+                <h3 class="cards__titulo">${product.nombre}</h3>
+                <p class="cards__info">${product.descripcion}.</p>
+                <p class="cards__info"> Contenido neto: ${
+                  product.contenidoNeto
+                }.</p>
+                <p class="cards__precio${
+                  product.precio < 3000 ? "-oferta" : "-comun"
+                }">Precio: $ ${product.precio}</p>
+                <button class="btn btn-bd-primary" id="button${
+                  product.id
+                }">Agregar al carrito</button>
+        `;
       sectionEcommerce.appendChild(eCommerceHtml);
       const card_button = document.getElementById(`button${product.id}`);
       contadorCarrito();
@@ -389,10 +389,10 @@ function Historial() {
       historial.innerHTML += `<div class="contenedor" ><img class="carrito__img" src="${
         product.img
       }" alt="${product.nombre}"></img>
-        <li class="">${product.cantidad} ${product.nombre} $${
+      <li class="">${product.cantidad} ${product.nombre} $${
         product.precio * product.cantidad
       }</li></div>
-        `;
+      `;
     });
   }
 }
