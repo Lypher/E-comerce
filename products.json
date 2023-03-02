@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "img": "assets/ensure_advance.png",
+    "img": "./assets/ensure_advance.png",
     "nombre": "Ensure Advance",
     "descripcion": "Suplemento nutricional sabor banana",
     "contenidoNeto": "400g",
