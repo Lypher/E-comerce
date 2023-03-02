@@ -18,7 +18,7 @@ let historialarray = [];
 
 //Fetch de Productos.json//
 
-fetch("productos.json")
+fetch("products.json")
   .then((response) => response.json())
   .then((data) => {
     for (let product of data) {
